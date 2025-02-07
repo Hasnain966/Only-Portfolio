@@ -10,198 +10,118 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Add Firebase SDK -->
-     <style> 
-     .form-container {
-      background-color: rgba(23, 89, 211, 0.767);
-      padding: 20px;
-      border-radius: 8px;
-      margin-left: 650px;
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .form-container h2 {
-      color: #fff;
-      text-align: center;
-      margin-bottom: 20px;
-  }
-
-  .form-container label {
-      color: #fff;
-      font-size: 14px;
-      margin-bottom: 5px;
-      display: block;
-  }
-
-  .form-container input[type="text"],
-  .form-container input[type="email"],
-  .form-container input[type="number"],
-  .form-container input[type="password"],
-  .form-container input[type="message"],
-
-  .form-container textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-  }
-
-  .form-container textarea {
-      resize: vertical;
-  }
-
-  .form-container button {
-      width: 100%;
-      padding: 12px;
-      background-color: #1d64b0;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-  }
-
-  .form-container button:hover {
-      background-color: #174d8b;
-  }
-
-  .left-section {
-    margin-left:100px ;
-    position: absolute;
-    max-width: 500px;
-    background-color: #3498db;
-    color: white;
-    padding: 2rem;
-    border-radius: 10px 0 0 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    top: 3850px;
-}
-
-.left-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #ffffff;
-    padding-bottom: 0.5rem;
-}
-
-.contact-info {
-    margin-bottom: 1.5rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.contact-item i {
-    font-size: 1.2rem;
-    margin-right: 1rem;
-    color: #ecf0f1;
-}
-
-.contact-item p {
-    font-size: 1rem;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1.5rem;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-    color: #ecf0f1;
-}
-
-.right-section {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.right-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #3498db;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input, textarea {
-    margin-bottom: 1rem;
-    padding: 0.8rem;
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-
-  @media (max-width: 500px) {
-      .form-container {
-          width: 90%;
+    <style>
+      /* General Styles */
+      #contact {
+        padding: 20px;
+        text-align: center;
+        background-color: #f7f7f7;
+      }
+    
+      .section-header {
+        font-size: 2rem;
+        color: #3498db;
+        margin-bottom: 20px;
+      }
+    
+      /* Contact Form Container */
+      .contact-form-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    
+      /* Personal Info */
+      .personal-info {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+    
+      .personal-info h3 {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+        color: #3498db;
+      }
+    
+      .personal-info p {
+        margin: 5px 0 15px;
+        font-size: 1rem;
+        color: #333;
+      }
+    
+      /* Form Styling */
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+    
+      label {
+        margin: 10px 0 5px;
+        font-size: 1rem;
+        color: #333;
+      }
+    
+      input, textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+    
+      button {
+        padding: 12px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    
+      button:hover {
+        background-color: #2980b9;
+      }
+    
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .contact-form-container {
           padding: 15px;
+        }
+    
+        input, button {
+          font-size: 0.9rem;
+        }
+    
+        .section-header {
+          font-size: 1.5rem;
+        }
       }
-
-      .form-container h2 {
-          font-size: 18px;
+    
+      @media (max-width: 500px) {
+        .contact-form-container {
+          padding: 10px;
+        }
+    
+        input, button {
+          font-size: 0.8rem;
+        }
+    
+        .section-header {
+          font-size: 1.2rem;
+        }
       }
-
-      .form-container input[type="text"],
-      .form-container input[type="email"],
-      .form-container input[type="number"],
-      .form-container input[type="password"],
-      .form-container input[type="message"],
-      .form-container textarea {
-          font-size: 12px;
-      }
-
-      .left-section h2 {
-          font-size: 20px;
-      }
-  }
-</style>
-
+    </style>
 </head>
 
 <body>
@@ -218,6 +138,7 @@ button:hover {
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#services">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
         <div class="cancel-btn">
           <i class="fas fa-times"></i>
         </div>
@@ -402,16 +323,50 @@ button:hover {
 </section>
 <!-- My Project Section End -->
 <div id="toast-container" class="toast-container"></div> 
+  
 
 
-  
-  
+
+
+
+
+<section id="contact">
+  <h1 class="section-header">Contact</h1>
+
+  <!-- Personal Contact Information and Contact Form -->
+  <div class="contact-form-container">
+    <div class="personal-info">
+      <h3>Name:</h3>
+      <p>Hasnain-Sheikh</p>
+
+      <h3>Email:</h3>
+      <p>husnainsheikh2410@gmail.com</p>
+
+      <h3>Phone:</h3>
+      <p>0311 2278 199</p>
+    </div>
+
+    <form action="#" method="post">
+      <label for="user-name">Your Name:</label>
+      <input type="text" id="user-name" name="user-name" placeholder="Enter your name" required>
+
+      <label for="user-email">Your Email:</label>
+      <input type="email" id="user-email" name="user-email" placeholder="Enter your email" required>
+
+      <label for="user-message">Your Message:</label>
+      <textarea id="user-message" name="user-message" placeholder="Write your message here" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
 </div>
 </div>
 </div>
 </div>
 </section>
+
 
 
 
