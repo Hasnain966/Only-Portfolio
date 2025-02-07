@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Portfolio Website HTML CSS| CodingNepal</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add Firebase SDK -->
+     <style> 
+     .form-container {
+      background-color: rgba(23, 89, 211, 0.767);
+      padding: 20px;
+      border-radius: 8px;
+      margin-left: 650px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .form-container label {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="number"],
+  .form-container input[type="password"],
+  .form-container input[type="message"],
+
+  .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+  }
+
+  .form-container textarea {
+      resize: vertical;
+  }
+
+  .form-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1d64b0;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+
+  .form-container button:hover {
+      background-color: #174d8b;
+  }
+
+  .left-section {
+    margin-left:100px ;
+    position: absolute;
+    max-width: 500px;
+    background-color: #3498db;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    top: 3850px;
+}
+
+.left-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 0.5rem;
+}
+
+.contact-info {
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: #ecf0f1;
+}
+
+.contact-item p {
+    font-size: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ecf0f1;
+}
+
+.right-section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.right-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+  @media (max-width: 500px) {
+      .form-container {
+          width: 90%;
+          padding: 15px;
+      }
+
+      .form-container h2 {
+          font-size: 18px;
+      }
+
+      .form-container input[type="text"],
+      .form-container input[type="email"],
+      .form-container input[type="number"],
+      .form-container input[type="password"],
+      .form-container input[type="message"],
+      .form-container textarea {
+          font-size: 12px;
+      }
+
+      .left-section h2 {
+          font-size: 20px;
+      }
+  }
+</style>
+
+</head>
+
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="media-icons">
+        <a href="https://www.linkedin.com/in/husnain-sheikh-403548316/" target="_blank" ><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Hasnain966" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/@MyCoding2" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Home Section Start -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="home">
+        <div class="profile-image">
+          <img src="./Images/circul.jpg" alt="Profile Image">
+        </div>
+      </div>
+      <div class="text">
+        <div class="text-one">Hello,</div>
+        <div class="text-two">I'm Hasnain-Hanif</div>
+        <div class="text-three">Frontend Developer</div>
+        <div class="text-four">From: Karachi,Pakistan</div>
+      </div>
+      <div class="buttonn">
+        <button type="button"> <a href="https://www.linkedin.com/in/husnain-sheikh-403548316/" >Hire Me</a></button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section Start -->
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>About Me</span></div>
+      <div class="about-details">
+        <div class="left">
+          <div class="card-container">
+            <div class="card-background"></div>
+            <div class="card-background"></div>
+            <div class="card-main">
+                <img src="./Images/image.jpg" alt="Profile photo" class="personal-img">
+            </div>
+        </div>
+        </div>
+        <div class="right">
+          <div class="topic">Development Is My Passion</div>
+          <p>
+            My name is Hasnain Hanif
+
+            I completed my course in January 2025 from Saylani, where I appeared for the test at the National Stadium. I successfully completed the program in December 2023, and I am now a full-stack developer. My trainer, Sir Sufiyan, has been instrumental in my development, putting in a lot of effort to guide me throughout the learning process.
+           
+          </p>
+            <div class="button">
+              <button type="button"> <a href="./my-cv-Hasnain.pdf" >Download CV</a></button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- My Skill Section Start -->
+  <!-- Section Tag and Other Div will same where we need to put same CSS -->
+  <section class="skills" id="skills">
+    <div class="content">
+      <div class="title"><span>My Skills</span></div>
+      <div class="skills-details">
+        <div class="text">
+          <div class="topic">Skills Reflects Our Knowledge</div>
+          <p>I believe that skills are the key to unlocking new possibilities and achieving great results. With a strong foundation in web development, UI/UX design, and problem-solving, I continuously strive to enhance my knowledge and capabilities to stay ahead in the fast-paced world of technology.</p>
+          <div class="experience">
+            <div class="num">1</div>
+            <div class="exp">
+              Years Of <br />
+              Experience
+            </div>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="box">
+            <div class="topic">HTML</div>
+            <div class="per">90%</div>
+          </div>
+          <div class="box">
+            <div class="topic">CSS</div>
+            <div class="per">80%</div>
+          </div>
+          <div class="box">
+            <div class="topic">JavScript</div>
+            <div class="per">75%</div>
+          </div>
+          <div class="box">
+            <div class="topic">React JS</div>
+            <div class="per">70%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Project Section Start -->
+<section class="services" id="services">
+  <div class="content">
+      <div class="title"><span>My Project</span></div>
+      <div class="boxes">
+        <div class="box">
+              <div class="image">
+                <img src="./Images/card1.jpg" alt="Project Image 1">
+              </div>
+              <div class="topic">Saylani Microfinance App</div>
+              <p>These projects are built with React.js and feature a beautiful UI.</p>
+              <div class="buttons">
+                  <a href="https://github.com/Hasnain966/SAYLANI-TEST-2025" target="_blank"><button class="btn">GitHub</button></a>
+                  <a href="https://saylani-test-2025.vercel.app/" target="_blank"><button class="btn">Live Demo</button></a>
+              </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <img src="./Images/card2.jpg" alt="Project Image 2">
+              </div>
+              <div class="topic">SocialSite</div>
+              <p>this project is built using HTML, CSS, and JavaScript. It features a Facebook-like UI.</p>
+              <div class="buttons">
+                  <a href="https://github.com/Hasnain966/Social-media-app" target="_blank"><button class="btn">GitHub</button></a>
+                  <a href="https://social-media-app-two-beige-69.vercel.app/" target="_blank"><button class="btn">Live Demo</button></a>
+              </div>
+          </div>
+          <div class="box">
+              <div class="image">
+                  <img src="./Images/card4.png" alt="Project Image 3">
+              </div>
+              <div class="topic">Eat-an-Spilt</div>
+              <div class="buttons">
+                <p>You have an eat-n-split project built in ReactJS.and feature a beautiful UI. </p>
+                  <a href="https://github.com/Hasnain966/Eat-an-Spilt-" target="_blank"><button class="btn">GitHub</button></a>
+                  <a href="https://eat-an-spilt.vercel.app/" target="_blank"><button class="btn">Live Demo</button></a>
+                </div>
+          </div>
+          <div class="box">
+            <div class="image">
+                  <img src="./Images/card3.png" alt="Project Image 4">
+              </div>
+              <div class="topic">My-Todo-App</div>
+              <p> My-Todo-App is a fully functional and responsive task management application built using React JS. This user-friendly app helps users efficiently manage their daily tasks.</p>
+              <div class="buttons">
+                <a href="https://github.com/Hasnain966/React-Todo-App" target="_blank"><button class="btn">GitHub</button></a>
+                <a href="https://react-todo-app-two-blond.vercel.app/" target="_blank"><button class="btn">Live Demo</button></a>
+              </div>
+          </div>
+          <div class="box">
+            <div class="image">
+                  <img src="./Images/card5.png" alt="Project Image 5">
+              </div>
+              <div class="topic">Toast-Notifications</div>
+              <p>This project, named Toast Notification, is built using HTML, CSS, and JavaScript. The application provides a interactive way to display different types of notifications.</p>
+              <div class="buttons">
+                  <a href="https://github.com/Hasnain966/Hasnain-s-Advanced-Toast-Notifications" target="_blank"><button class="btn">GitHub</button></a>
+                  <a href="https://hasnain-s-advanced-toast-notifications.vercel.app/" target="_blank"><button class="btn">Live Demo</button></a>
+              </div>
+          </div>
+          <div class="box">
+              <div class="image">
+                  <img src="./Images/card6.png" alt="">
+                </div>
+                <div class="topic">Tic-Tac-Toe</div>
+                <p>
+                This Tic Tac Toe project is a fun and interactive 2-player game developed using HTML, CSS, and JavaScript. The game offers a simple yet engaging experience for users.</p>
+              <div class="buttons">
+                  <a href="https://github.com/Hasnain966/Tic-Tac-Toe" target="_blank"><button class="btn">GitHub</button></a>
+                  <a href="https://tic-tac-toe-seven-jet.vercel.app/" target="_blank"><button class="btn">Live Demo</button></a>
+              </div>
+          </div>
+        </div>
+      <div class="all-projects-btn">
+          <a href="https://github.com/yourusername" target="_blank"><button class="btn">All Projects</button></a>
+      </div>
+  </div>
+</section>
+<!-- My Project Section End -->
+<div id="toast-container" class="toast-container"></div> 
+
+<section id="contact">
+  
+  <h1 class="section-header">Contact</h1>
+  
+</section>  
+  
+  
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+    <!-- User Data Form -->
+    <div class="form-container">
+      <h2>User Information Form</h2>
+      <form>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+
+          <label for="Message">Message</label>
+          <input type="Message" id="Message" placeholder="Enter your message" required>
+
+          <label for="number" class="input-design">Phone Number</label>
+          <input type="number" id="number" placeholder="Enter your phone number" required>
+
+          <label for="age" class="input-design">Age</label>
+          <input type="number" id="age" placeholder="Enter your age" required >
+
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+
+  <!-- Your Pre-filled Data Form -->
+  <div class="left-section">
+      <h2>CONTACT US</h2>
+      <div class="contact-info">
+          <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Hasnain-Hanif</p>
+          </div>
+          <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>husnainsheikh2410@gmail.com</p>
+          </div>
+          <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p>0311 2278 199</p>
+          </div>
+      </div>
+      <p>To know more, connect with me:</p>
+      <div class="social-icons">
+         
+<a href="https://www.linkedin.com/in/husnain-sheikh-403548316/" target="_blank" ><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/Hasnain966" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://www.youtube.com/@MyCoding2" target="_blank"><i class="fab fa-youtube"></i></a> 
+
+      </div>
+  </div>
+
+
+
+<br>
+<!-- Footer Section Start -->
+<footer>
+    <div class="text textt">
+      <b><i>
+    </b></i>
+    <u><span>Created By <a href="#">Hasnain-$heikh</a> | &#169; 2024 All Rights Reserved</span></u>
+    </div>
+  </footer>
+<script src="script.js"></script>
+
+</body>
+
+</html>
+  
+
